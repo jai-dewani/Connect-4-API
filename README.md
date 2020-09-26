@@ -1,11 +1,9 @@
-# Connect 4 API
-
-# API Instructions 
+# Connect 4 API - API Instructions 
 
 ## GET Information
 
 API-type: GET  
-API-url: /?token=your-game-token  
+API-url: /?token=your-game-token   
 Data-expected: None
 
 Response-type:   
@@ -39,7 +37,7 @@ Response-type:
 ## Play Next Move
 
 API-tpye: POST  
-API-url: / 
+API-url: /  
 Data-expected:  
 - token: Your game-token you got at the beginning of the game  
 - col: The column at which the player is inserting the next coint  
@@ -54,9 +52,9 @@ Response-type:
 
 ## Start a game
 
-API-type: GET 
-API-url: /start/
-Data-expected: None
+API-type: GET   
+API-url: /start/  
+Data-expected: None  
 
 Response-type:
 
@@ -68,9 +66,9 @@ Response-type:
 
 ## Reset the game 
 
-API-type: GET
-API-url: /reset/?token=your-game-token  
-Data-expected: None
+API-type: GET  
+API-url: /reset/?token=your-game-token   
+Data-expected: None 
 
 Response-type:
 

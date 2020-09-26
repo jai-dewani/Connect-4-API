@@ -1,7 +1,13 @@
-var express = require("express");
-var router = express.Router();
-var { checkRows, checkCol, checkDiagonal, makeMove, checkWin }  = require("./gameRules")
-var Game = require("../models/game");
+const express = require("express");
+const router = express.Router();
+
+const fs = require("fs");
+const showdown = require("showdown")
+const converter = new showdown.Converter();
+
+const { checkRows, checkCol, checkDiagonal, makeMove, checkWin }  = require("./gameRules")
+const Game = require("../models/game");
+const { request } = require("express");
 
 // State matrix values
 // 0 -> None 
@@ -140,6 +146,16 @@ router.get("/reset",function(req,res){
                 'status': "Game Reset",
             })
         })
+    })
+})
+
+router.get("/API",function(req,res){
+    console.log("A");
+    fs.readFile('README.md', 'utf8', (err,data)=>{
+        if(err) return err
+        html = converter.makeHtml(data)
+        console.log(html)
+        res.send(html)
     })
 })
 
