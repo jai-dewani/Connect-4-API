@@ -1,5 +1,20 @@
 # Connect 4 API - API Instructions 
 
+## Start a game
+
+API-type: GET   
+API-url: /start/  
+Data-expected: None  
+
+Response-type:
+
+    { 
+        'token': String
+    }
+
+    - token: A string which will be used identify a unique game
+
+
 ## GET Information
 
 API-type: GET  
@@ -50,19 +65,6 @@ Response-type:
 
     - status: Contains text describing if the move was valid or invalid and if someone win's the game it will display "Red Won" or "Yellow Won"
 
-## Start a game
-
-API-type: GET   
-API-url: /start/  
-Data-expected: None  
-
-Response-type:
-
-    { 
-        'token': String
-    }
-
-    - token: A string which will be used identify a unique game
 
 ## Reset the game 
 
